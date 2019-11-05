@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hawk9598.project1;
+package io.github.bbodin.planner;
 
 /**
  *
- * @author Wayne
+ * @author toky
  */
 public interface XMLizable {
     public String toXML ();

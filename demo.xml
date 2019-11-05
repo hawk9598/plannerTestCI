@@ -1,0 +1,24 @@
+<planner name='demo'>
+<board name='Work'>
+<section name='Todo'>
+<task name='task11' start='Tue Sep 10 10:15:14 SGT 2019' duration='PT24H' deadline='Mon Sep 30 10:15:14 SGT 2019' description='description11'/>
+<task name='task12' start='Wed Sep 11 10:15:14 SGT 2019' duration='PT240H' deadline='Thu Oct 10 10:15:14 SGT 2019' description='description12'/>
+</section>
+<section name='teaching'>
+<task name='task21' start='Tue Sep 10 10:15:14 SGT 2019' duration='PT360H' deadline='Mon Sep 30 10:15:14 SGT 2019' description='description21'/>
+</section>
+</board>
+<board name='Perso'>
+<section name='Family'>
+<task name='task31' start='Fri Sep 13 10:15:14 SGT 2019' duration='PT24H' deadline='Mon Sep 30 10:15:14 SGT 2019' description='description31'/>
+<task name='task32' start='Fri Sep 13 10:15:14 SGT 2019' duration='PT24H' deadline='Sun Oct 20 10:15:14 SGT 2019' description='description32'/>
+</section>
+<section name='Friends'>
+<task name='task41' start='Tue Sep 10 10:15:14 SGT 2019' duration='PT24H' deadline='Wed Oct 30 10:15:14 SGT 2019' description='description41'/>
+<task name='task42' start='Tue Sep 10 10:15:14 SGT 2019' duration='PT24H' deadline='Mon Sep 30 10:15:14 SGT 2019' description='description42'/>
+</section>
+<section name='Health'>
+<task name='task51' start='Tue Sep 10 10:15:14 SGT 2019' duration='PT1200H' deadline='Fri Nov 29 10:15:14 SGT 2019' description='description51'/>
+</section>
+</board>
+</planner>

@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hawk9598.project1;
+package io.github.bbodin.planner;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
-//Organizes the Sections according to urgency, i.e. one board contains multiple sections of the same urgency.
 /**
  *
- * @author Wayne
+ * @author toky
  */
 public class Board implements XMLizable {
 
@@ -40,10 +39,15 @@ public class Board implements XMLizable {
         for (Section s : sections) {
             sectionStr += s.toXML();
         }
-        String res = "\t<board name='" + this.name + "'>\n" + sectionStr + "\t</board>\n";
+        String res = "<board name='" + this.name + "'>\n" + sectionStr + "</board>\n";
         return res;
     }
 
-  
+    Section getSection(String field) throws Exception {
+        for (Section s : this.getSections()) {
+            if (s.getName().equals(field)) return s;
+        }
+        throw new Exception();
+    }
     
 }
