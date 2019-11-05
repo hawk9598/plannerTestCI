@@ -3,52 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.github.bbodin.planner;
 
-import java.awt.Color;
+// Contains Multiple Projects from the same faculty and of the same urgency. 
+
+package com.hawk9598.project1;
+
 import java.util.ArrayList;
 import java.util.List;
+//import java.awt.Color;
+
 
 /**
- * This Section object specifies a section that can contain multiple tasks.
- * @author toky
+ *
+ * @author Wayne
  */
+
 public class Section implements XMLizable {
 
     private final List<Task> tasks;
     private final String name;
-    private final Color color;
     
-    Section(String name, Color color) {
-        this.name = name;
-        this.color = color;
-        this.tasks = new ArrayList<>();
-    }
 
-    Section(String name) {
+    Section(String name){
         // We use 'this' here to call a different constructor
-        this(name, Color.white); 
+        this.name = name; 
+        this.tasks = new ArrayList<>();
     }
     
     void addTask(Task t) {
       this.tasks.add(t);
     }
     
-    Color getColor(){
-        return this.color;
-    }
     String getName(){
         return this.name;
     }
     Iterable<Task> getTasks() {
         return this.tasks;
-    }
-    
-     Task getTask(String name) throws Exception {
-        for (Task t : this.getTasks()) {
-            if (t.getName().equals(name)) return t;
-        }
-        throw new Exception();
     }
     
     @Override
@@ -59,7 +49,8 @@ public class Section implements XMLizable {
             tasksStr += t.toXML();
         }
         // TODO : add color here as well
-        String res = "<section name='" + this.name.replace("'", "") + "'>\n" + tasksStr + "</section>\n";
+       // String colour = "\t\t\t<Color>" + this.color + "</Color>\n";
+        String res = "\t\t<section name='" + this.name.replace("'", "") + "'>\n" + tasksStr + "\t\t</section>\n";
         return res;
     }
 
